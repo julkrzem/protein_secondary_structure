@@ -61,7 +61,7 @@ def upload():
             model = model8
             output_lang = output_lang8
         ids, seq = read_fasta(file)
-        prediction = model_predict(seq, input_lang,output_lang,model)
+        prediction = model_predict(seq, input_lang,output_lang, model)
         prev = list(zip(ids, seq, prediction))
  
         return render_template('upload.html', prev=prev)

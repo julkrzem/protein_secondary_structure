@@ -33,6 +33,8 @@ User can also select the model they want to use for prediction whether they pref
 All options have a maximum sequence length limitation of 100 amino acids (excessive sequences are being cut nad not used for predictions).
 
 
+## Info
+
 *The project was developed for educational purpose only.*
 *Some parts of notebooks in this project were based on or inspired by the PyTorch Tutorials*
 
