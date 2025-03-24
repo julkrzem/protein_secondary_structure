@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<div class="link">
+    <a href="{{ url_for('index') }}">Predct from sequence ></a>
+</div>
+
+<div class="form">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <h3>Select model</h3>
+        <p>There are two models available for prediction: SST3 outputs three-state (Q3) secondary structure and has higher accuracy 80% - 85%. The second model SST8 outputs eight-state (Q8) secondary structure but with lower accuracy 60% - 70%</p>
+            <div class="radio_group">
+                <input type="radio" id="sst3" name="model" value="sst3" checked>
+                <label for="sst3">SST3</label>
+
+                <input type="radio" id="sst8" name="model" value="sst8">
+                <label for="sst8">SST8</label>
+            </div>
+        
+        <h3>Upload FASTA file</h3>
+        <p>Make sure none of the sequences in the file is longer than 100 amino acids</p>
+        <div class="sequence_group">
+            <input type="file" name="file" required>
+            <button type="submit">UPLOAD</button>
+        </div>
+    </form>
+</div>
+
+{% if prev %}
+<div class="model_output">
+<textarea>{% for row in prev %}
+{{row[0]}}
+{{row[1]}}
+{{row[2]}}{% endfor %}
+</textarea>
+</div>
+{% endif %}
+
+
+{% endblock %}
