@@ -5,7 +5,7 @@ Starting with some tests documented in notebooks in the Notebooks folder, and te
 
 ## Dataset
 
-The dataset used for model training was downloaded from Kaggle.com: https://www.kaggle.com/datasets/alfrandom/protein-secondary-structure/
+The dataset used for model training was downloaded from Kaggle.com: https://www.kaggle.com/datasets/alfrandom/protein-secondary-structure/ (Database: Open Database, Contents: Database Contents)
 Cleaned data file was used to simplify the process on the initial stage of the project. 
 The dataset consists of over 300000 samples of polypeptide chains. For the model development shorter sequences were selected (up to 100 amino acids). For the X variable amino acid sequences were used, while for y, the three-state (Q3) secondary structure was chosen. Later in the development process, a model was also trained based on the eight-state (Q8) structure. The results for Q8 were lower, however, the best model from this stage was still saved for later predictions. With more computational power, it would probably be beneficial to use SST8 along with longer sequences or the entire dataset. To prevent data leakage, sequences were deduplicated, removing multiple identical chains from the same proteins and potentially some short identical sequences as well.
 
@@ -34,3 +34,6 @@ All options have a maximum sequence length limitation of 100 amino acids (excess
 
 
 *The project was developed for educational purpose only.*
+*Some parts of notebooks in this project were based on or inspired by the PyTorch Tutorials*
+
+*DISCLAIMER: This code and analysis are provided "as-is" without warranty of any kind, either express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement. The author makes no representations regarding the accuracy, completeness, or validity of any data, analysis, or conclusions contained herein. The user acknowledges that they should verify any conclusions or results independently before making decisions based on this content. The author shall not be liable for any damages, including but not limited to direct, indirect, incidental, special, or consequential damages, or any loss of profit, data, or use, arising from the use or inability to use this code and analysis.*
