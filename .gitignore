@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/macos,flask,python,visualstudiocode,jupyternotebooks,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,flask,python,visualstudiocode,jupyternotebooks,venv
 
@@ -343,6 +344,8 @@ secret_key.txt
 temp.ipynb
 
 
+=======
+>>>>>>> a9c7c254003b3cb4f7d856ff06f8280f30093d0e
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
